@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Required meta tags -------------------------------------------------------->
+
+  <meta charset="utf-8">
+  <title>Shoptrendys</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="https://use.typekit.net/zeu6itd.css">
+</head>
+<body>
+
+<!--------------Navbar---------------------------------------------------------->
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">Shoptrendys</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#product" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#aboutus" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact </a>
+                </li>
+            </ul>
+
+<!--------------Hamburger Menu--------------------------------------------------->
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+<!--------------Hero Section----------------------------------------------------->
+
+        <div class="hero-image">
+            <div class="hero-text">
+            <h1>Welcome to Shoptrendys</h1>
+            <button>Explore Products</button>
+            </div>
+        </div>
+
+<!--------------Photo_Grid------------------------------------------------------->
+
+        <section class="gallery">
+
+            <div class="headings">
+                <h1>Our Products</h1>
+            </div>
+
+            <div class="grid">
+                <img src="Images/1.jpg" alt="image-1" class="column">
+                <img src="Images/2.jpg" alt="image-2" class="column">
+                <img src="Images/3.jpg" alt="image-3" class="column">
+                <img src="Images/4.jpg" alt="image-4" class="column">
+                <img src="Images/5.jpg" alt="image-5" class="column">
+                <img src="Images/6.jpg" alt="image-6" class="column">
+                <img src="Images/7.jpg" alt="image-7" class="column">
+                <img src="Images/8.jpg" alt="image-8" class="column">
+                <img src="Images/9.jpg" alt="image-9" class="column">
+                <img src="Images/10.jpg" alt="image-10" class="column">
+                <img src="Images/11.jpg" alt="image-11" class="column">
+                <img src="Images/12.jpg" alt="image-12" class="column">
+                </div>
+        </section>
+
+<!--------------Javascript------------------------------------------------------>
+
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", mobileMenu);
+
+            function mobileMenu() {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            }
+
+            const navLink = document.querySelectorAll(".nav-link");
+
+            navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+            function closeMenu() {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }
+        </script>
+</body>
+</html>
